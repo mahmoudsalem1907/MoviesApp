@@ -1,12 +1,13 @@
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark ">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
-          <span className="fw-bold fs-4">C</span>ima{" "}
+        <Link className="navbar-brand" to="/">
+          <span className="fw-bold fs-4">C</span>ima
           <span className="fw-bold fs-4">S</span>how
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -21,29 +22,29 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
+              <Link className="nav-link active" aria-current="page" to="home">
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to="movies">
                 Movies
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to="tvshow">
                 Tv Show
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to="about">
                 About
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to="network">
                 Network
-              </a>
+              </Link>
             </li>
           </ul>
 
@@ -56,25 +57,25 @@ const Navbar = () => {
             />
             <ul className="d-flex list-unstyled mb-0 ">
               <li className="mx-2 ">
-                <i class="fa-brands fa-facebook"></i>
+                <i className="fa-brands fa-facebook white-color"></i>
               </li>
               <li className="mx-2">
-                <i class="fa-brands fa-youtube"></i>
+                <i className="fa-brands fa-youtube white-color"></i>
               </li>
               <li className="mx-2">
-                <i class="fa-brands fa-twitter"></i>
+                <i className="fa-brands fa-twitter white-color"></i>
               </li>
             </ul>
             <ul className="d-flex list-unstyled mb-0 ">
               <li className="mx-2 ">
-                <a href="" className="text-white text-decoration-none">
+                <Link to="login" className="text-white text-decoration-none">
                   Login
-                </a>
+                </Link>
               </li>
               <li className="mx-2 ">
-                <a href="" className="text-white text-decoration-none">
+                <Link to="register" className="text-white text-decoration-none">
                   Register
-                </a>
+                </Link>
               </li>
               <li className="mx-2 ">
                 <a href="" className="text-white text-decoration-none">
