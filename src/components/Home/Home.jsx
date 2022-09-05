@@ -3,7 +3,6 @@ import axios from "axios";
 const Home = () => {
   const [movies, setMovies] = useState([]);
   const [tvs, setTvs] = useState([]);
-  const [persons, setPersons] = useState([]);
   async function getData(type, setItem) {
     let { data } = await axios.get(
       `https://api.themoviedb.org/3/trending/${type}/day?api_key=7efb5e7d024a7ea715fdbf8a745ac0d1`
@@ -13,7 +12,6 @@ const Home = () => {
   useEffect(() => {
     getData("movie", setMovies);
     getData("tv", setTvs);
-    getData("person", setPersons);
   }, []);
   return (
     <div className="container">
@@ -33,7 +31,7 @@ const Home = () => {
               srcset=""
             />
             <p className="my-2">{movie.title}</p>
-            <span className="position-absolute top-0 mx-2 end-0 bg-info p-2 ">
+            <span className="position-absolute top-0 mx-2 end-0 bg-secondary p-2 ">
               {Math.floor(movie.vote_average)}
             </span>
           </div>
@@ -46,17 +44,17 @@ const Home = () => {
             Trending......
           </h2>
         </div>
-        {tvs.slice(0, 16).map((movie) => (
+        {tvs.slice(0, 16).map((tv) => (
           <div className="col-md-2 position-relative">
             <img
-              src={"https://image.tmdb.org/t/p/w500" + movie.poster_path}
+              src={"https://image.tmdb.org/t/p/w500" + tv.poster_path}
               alt=""
               className="w-100"
               srcset=""
             />
-            <p className="my-2">{movie.title}</p>
-            <span className="position-absolute top-0 mx-2 end-0 bg-info p-2 ">
-              {Math.floor(movie.vote_average)}
+            <p className="my-2">{tv.name}</p>
+            <span className="position-absolute top-0 mx-2 end-0 bg-secondary p-2 ">
+              {Math.floor(tv.vote_average)}
             </span>
           </div>
         ))}
