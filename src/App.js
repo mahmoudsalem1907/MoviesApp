@@ -9,6 +9,7 @@ import Home from "./components/Home/Home";
 import Network from "./components/Network/Network";
 import TvShow from "./components/TvShow/TvShow";
 import Register from "./components/Register/Register";
+import MovieDetails from "./components/MovieDetails/MovieDetails";
 
 function App() {
   return (
@@ -17,13 +18,14 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
 
-        <Route path="login" element={<Login />} />
-        <Route path="about" element={<About />} />
-        <Route path="movies" element={<Movies />} />
-        <Route path="home" element={<Home />} />
-        <Route path="network" element={<Network />} />
-        <Route path="tvshow" element={<TvShow />} />
-        <Route path="register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/moviedetails/:id" element={<MovieDetails />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/movies" element={<Movies />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/network" element={<Network />} />
+        <Route path="/tvshow" element={<TvShow />} />
+        <Route path="/register" element={<Register />} />
 
         <Route path="*" element={<NotFound />} />
       </Routes>
