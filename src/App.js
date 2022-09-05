@@ -10,6 +10,7 @@ import Network from "./components/Network/Network";
 import TvShow from "./components/TvShow/TvShow";
 import Register from "./components/Register/Register";
 import MovieDetails from "./components/MovieDetails/MovieDetails";
+import TvDetails from "./components/TvDetails/TvDetails";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
 
         <Route path="/login" element={<Login />} />
         <Route path="/moviedetails/:id" element={<MovieDetails />} />
+        <Route path="/tvdetails/:id" element={<TvDetails />} />
         <Route path="/about" element={<About />} />
         <Route path="/movies" element={<Movies />} />
         <Route path="/home" element={<Home />} />
