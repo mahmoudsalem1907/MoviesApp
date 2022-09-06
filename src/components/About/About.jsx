@@ -8,7 +8,7 @@ const About = () => {
         <li>
           <a
             href="https://www.linkedin.com/in/mahmoud-mohamed-8312311a5/"
-            className="text-danger text-decoration-none"
+            className="text-info text-decoration-none fw-bold"
           >
             LinkedIn
           </a>
@@ -16,7 +16,7 @@ const About = () => {
         <li className="my-2">
           <a
             href="https://github.com/mahmoudsalem1907"
-            className="text-decoration-none text-danger"
+            className="text-decoration-none text-info fw-bold"
           >
             GitHup
           </a>
@@ -24,7 +24,7 @@ const About = () => {
         <li>
           <a
             href="https://www.facebook.com/mahmoud.bibo.7370"
-            className="text-danger text-decoration-none"
+            className="text-info text-decoration-none fw-bold"
           >
             Facebook
           </a>
