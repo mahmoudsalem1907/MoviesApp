@@ -11,8 +11,8 @@ const Navbar = ({ isLogin, checkLogin }) => {
     <nav className="navbar navbar-expand-lg navbar-dark ">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
-          <span className="fw-bold fs-4">C</span>ima
-          <span className="fw-bold fs-4"> S</span>how
+          <span className="fw-bold fs-4 text-danger">C</span>ima
+          <span className="fw-bold fs-4 text-danger"> S</span>how
         </Link>
         <button
           className="navbar-toggler"
