@@ -12,10 +12,23 @@ const TvShow = () => {
   useEffect(() => {
     getData("tv", setTvs);
   }, []);
+  const [filter, setFilter] = useState("");
+  function handlersearch(e) {
+    setFilter(e.target.value);
+  }
+  let dataSearch = tvs.filter((e) => e.name.toLowerCase().includes(filter));
   return (
     <div className="container">
+      <input
+        className="form-control me-2 mt-3"
+        type="search"
+        placeholder="Search"
+        aria-label="Search"
+        value={filter}
+        onChange={handlersearch}
+      />
       <div className="row my-3">
-        {tvs.map((e) => (
+        {dataSearch.map((e) => (
           <div className="col-md-2 position-relative" key={e.id}>
             <Link to={"/tvdetails/" + e.id}>
               <img

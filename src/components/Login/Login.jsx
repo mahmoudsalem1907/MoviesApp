@@ -3,7 +3,7 @@ import axios from "axios";
 import Joi from "joi";
 import { useNavigate } from "react-router-dom";
 
-const Login = () => {
+const Login = ({ checkLogin }) => {
   let navigate = useNavigate();
   const [valditerror, setValditeError] = useState([]);
   const [apierror, setApiError] = useState("");
@@ -28,6 +28,8 @@ const Login = () => {
         user
       );
       if (data.message == "success") {
+        localStorage.setItem("userToken", data.token);
+        checkLogin();
         navigate("/home");
       } else {
         setApiError(data.message);

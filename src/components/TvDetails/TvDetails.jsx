@@ -28,7 +28,10 @@ const TvDetails = () => {
           <h1 className="mb-5">{tvdetails.name}</h1>
           {tvdetails && tvdetails.genres
             ? tvdetails.genres.map((e) => (
-                <span className="p-2 bg-info m-2 border border-info rounded-pill">
+                <span
+                  key={tvdetails.id}
+                  className="p-2 bg-info m-2 border border-info rounded-pill"
+                >
                   {e.name}
                 </span>
               ))

@@ -40,7 +40,7 @@ const Home = () => {
       <div className="row my-3">
         <div className="col-md-4 d-flex justify-content-center align-items-start flex-column">
           <h2>
-            The Best TV Show <br /> In The Cima Show <br />
+            The Best TV SHOW <br /> In The Cima Show <br />
             Trending......
           </h2>
         </div>
